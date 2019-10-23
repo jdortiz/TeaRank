@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/teasListFragment">
+
+    <fragment
+            android:id="@+id/teasListFragment"
+            android:name="com.canonicalexamples.tearank.views.TeasListFragment"
+            android:label="fragment_teas_list"
+            tools:layout="@layout/fragment_teas_list">
+        <action
+            android:id="@+id/action_teasListFragment_to_teaEditFragment"
+            app:destination="@id/teaEditFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+            android:id="@+id/teaEditFragment"
+            android:name="com.canonicalexamples.tearank.views.TeaEditFragment"
+            android:label="fragment_tea_edit"
+            tools:layout="@layout/fragment_tea_edit">
+        <action
+                android:id="@+id/action_teaEditFragment_to_teasListFragment"
+                app:destination="@id/teasListFragment"
+                app:popUpTo="@+id/teasListFragment"
+                app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

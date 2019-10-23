@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TeaRank</string>
     <string name="action_settings">Settings</string>
+    <string name="tea_name">Tea name</string>
+    <string name="save">Save</string>
+    <string name="tea_type">Tea type</string>
 </resources>
