@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.canonicalexamples.tearank.R
 import com.canonicalexamples.tearank.viewmodels.TeaEditViewModel
+import kotlinx.android.synthetic.main.fragment_tea_edit.*
 import org.koin.android.viewmodel.ext.android.viewModel as viewModelDelegate
 
 /**
@@ -36,4 +37,13 @@ class TeaEditFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? =
         inflater.inflate(R.layout.fragment_tea_edit, container, false)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        save_button.isEnabled = viewModel.saveButtonEnabled
+        save_button.setOnClickListener {
+            viewModel.saveButtonTapped()
+        }
+    }
 }

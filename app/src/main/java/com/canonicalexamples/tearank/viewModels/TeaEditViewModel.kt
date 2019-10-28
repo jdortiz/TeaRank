@@ -21,5 +21,9 @@ import androidx.lifecycle.ViewModel
  * limitations under the License.
  */
 class TeaEditViewModel: ViewModel() {
+    val saveButtonEnabled: Boolean = true
 
+    fun saveButtonTapped() {
+
+    }
 }
